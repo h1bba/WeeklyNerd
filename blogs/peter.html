@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peter Paul Koch - Weekly Nerd</title>
+  <link rel="stylesheet" href="/styles/stylesheet.css" />
+</head>
+
+<body>
+  <section>
+    <img src="/images/kilian-valkhof.jpg"
+      alt="https://www.zoetermeerisdeplek.nl/ondernemen/ondernemersverhalen/startup-polypane-bouwt-websites-5-keer-sneller" />
+    <h2>Peter Paul Koch</h2>
+
+    <p>
+      Kilian is onderdeel van het Electron governance team. Electron maakt het
+      mogelijk om met Chromium en NodeJS je eigen desktop applicaties te
+      bouwen met JavaScript. Kilian heeft zijn eigen browser genaamd PolyPane,
+      deze browser is dus gemaakt met JavaScript inprincipe. PolyPane is een
+      browser voor developers, het biedt extra tools aan die vaak nog
+      experimenteel zijn voor toekomstige browser updates. Wat ik bijvoorbeeld
+      een handige feature vind is dat zijn browser 3 viewports tegelijk
+      ondersteunt, hierdoor is responsivity maken als developer
+      overzichtelijker.
+    </p>
+
+    <img src="/images/polypane.png" alt="https://polypane.app/" />
+
+    <p>
+      Nu we een beetje weten wie Kilian is, kunnen we beter begrijpen waar hij
+      zich mee bezig houdt en wat voor inzichten hij ons kan geven. Kilian
+      zijn speech gaat vooral over de methode:
+      <b>Rule of the least powerful</b>, Dat houdt in dat we de minst sterke
+      taal moeten gebruiken voor de features die we willen maken. Toen ik wat
+      jonger was had ik ooit te horen gekregen: "Python where we can, C++
+      where we must", dit is een quote die een engineer bij Google had gezegd
+      12 jaar geleden. Dit is hetzelfde principe van the rule of least
+      powerful.
+    </p>
+
+    <p>
+      Voor HTML, CSS en JavaScript is HTML eerst de least powerful language,
+      een mooi voorbeeld hiervoor is een vraag voor een datum, we kunnen in
+      JavaScript een gehele custom calender maken, maar HTML biedt de
+      <input type="date" /> aan, deze heeft veel betere ondersteuning door de
+      browser en is universeel toegankelijk.
+    </p>
+
+    <p>
+      Kilian die bracht naar voren dat Browsers steeds krachtiger worden, en
+      dat we veel functionaliteiten beter kunnen oplossen door semantisch
+      gebruik te maken van de least powerful language, de voorbeeld die hij
+      gaf was een custom switch, vroeger was CSS minder krachtig, waardoor
+      veel developers custom switches begonnen te maken met JavaScript,
+      hierdoor ontstond het probleem dat veel van het web er goed uitziet,
+      maar veel ondersteuning voor toegankelijkheid mist. Mensen met een
+      screenreader kunnen potentieel jouw custom switch niet gebruiken, als je
+      dit semantisch met HTML en CSS had gedaan was de toegankelijkheid veel
+      beter geweest, dit bedoelen ze dus op de Minor met "Het internet is
+      kapot"
+    </p>
+
+    <p>
+      Custom switches waren vroeger checkboxes die de input onzichtbaar
+      (appearance: none;) maakte en met veel handmatig werk zelf een "switch"
+      creëerde, tegenwoordig voegen browsers zoals Safari en Ladybird zelf
+      switch atributes toe met thema presets die developers kunnen gebruiken.
+    </p>
+
+    <p>
+      Kilian bracht functionaliteiten omhoog die we tegenwoordig goed kunnen
+      gebruiken makkelijker om het leven makkelijker te maken zoals:
+    </p>
+    <ul>
+      <li>::before & ::after pseudo classes</li>
+      <li>
+        de :checked validatie van een radio of checkbox button die nu mogelijk
+        is in CSS
+      </li>
+      <li>Custom focus states van de browsers</li>
+      <li>
+        Scroll-behaviour: smooth; om smooth te scrollen naar een target link
+      </li>
+      <li>scroll-margin-top:</li>
+      <li>Colorpicker <input type="color" /></li>
+      <li>Prefers-reduced-motion voor zeezieken</li>
+      <li>
+        Details en summary elementen voor semantisch, uitklapbare velden en de
+        "open" atribuut hierbij
+      </li>
+      <li>Accordions en modals</li>
+      <li>::marker om een list bullet te stylen</li>
+      <li>Het (redelijk) nieuwe Dialog element, de vervanger van Alert</li>
+      <li>De "top-layer" die dialog en modals gebruiken</li>
+      <li>@starting-style voor css elementen</li>
+      <li>
+        :has() selector om te kijken of een element een atribuut bevat, en aan
+        de hand hiervan css kan bewerken, de nieuwe soort "if" statement kan
+        je het wel noemen, maar van CSS
+      </li>
+      <li>Select kunnen stylen met appearance:</li>
+    </ul>
+  </section>
+</body>
+
+</html>
