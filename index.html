@@ -12,7 +12,7 @@
 
 <body>
   <main>
-<!--     
+    <!--     
     <section class="hero-title">
       <h1>Ufuk's Weekly Nerd Blog</h1>
     </section> -->
@@ -182,23 +182,66 @@
       <h2>Nieuwe Leerdoelen</h2>
       <ul>
         <li>
-          Leren hoe ik in en met een team samen aan hetzelfde project werk,
-          dit bevat dus ook dingen als branches, mergen en merge conflicts,
-          maar ook logica om code van anderen samen te voegen en de
-          professionele werkwijze om dit goed te laten verlopen. Voorheen had
-          ik bij de hackathon gemerkt dat dit toch een belangrijk punt is die
-          ik kan verbeteren.
+          Leerdoel: Samenwerken
+
+          Situatie: We werken in een team samen om een opdracht van de opdrachtgever te voltooien.
+
+          Taak: Ik wil leren hoe ik efficiënt samen kan werken met een team aan hetzelfde project. Dit bevat dus ook
+          dingen zoals mergen en merge conflicts, maar ook logica om de code van anderen samen te voegenen de
+          professionele werkwijze om dit goed te laten verlopen.
+
+          Actie: Code standaarden afspreken, benoeming afspreken, code reviews, meetings en taakverdeling.
+
+          Resultaat: We hebben een volwaardige project kunnen afronden samen die werkend is. Merge conflicts waren
+          minder dan verwacht doordat we goed te werk gingen met branches, pullen en pushen. We hebben ervoor gekozen om
+          de standaarden met elkaar af te spreken. Zo hebben we gekozen voor PascalCase voor components, kebabCase bij
+          css-classes en camelCase voor functies. De code reviews waren bijna dagelijks (vanaf week 3) en we hebben
+          meetings gehad met de opdrachtgever, maar ook de docenten.
+
+          Reflectie: Voorheen had ik bij de hackathon gemerkt dat dit toch een belangrijk punt is die
+          ik kan verbeteren, omdat daar een hoop tijd weg ging aan merge conflicts. Achteraf ben ik tevreden met de
+          behaalde resultaat voor deze leerdoel. Ik heb en geleerd hoe ik beter samen kan werken met mijn teamgenoten en
+          ik voel me wat meer zelfverzekerd omdat ik ervaring op doe.
+
         </li>
         <li>
-          Ik wil toch wat meer kennis en ervaring hebben met JavaScript, ik
-          heb het gevoel dat mijn HTML en CSS kunsten goed zijn verbeterd, en
-          dat het nu de beurt is voor JavaScript, ik wil graag leren hoe ik
-          functionaliteiten beter schaalbaar en herbruikbaar kan maken om een
-          project makkelijk uit te breiden. Hiermee bedoel ik dus dus
-          dynamische pagina's maken inplaats van statische, met het gebruik
-          van bijvoorbeeld een CMS of API.
+          Leerdoel: Schaalbare applicatie maken
+
+          Situatie: Een applicatie maken die 'futureproof' is en makkelijk te schalen is voor uitbreidingen. Ik wil toch
+          wat meer kennis en ervaring hebben met JavaScript, ik heb het gevoel dat mijn HTML en CSS kunsten goed zijn
+          verbeterd, en dat het nu de beurt is voor JavaScript, ik wil graag leren hoe ik functionaliteiten beter
+          schaalbaar en herbruikbaar kan maken om een project makkelijk uit te breiden. Hiermee bedoel ik dus dynamische
+          pagina's maken inplaats van statische, met het gebruik van bijvoorbeeld een CMS of API.
+
+          Taak: Herbruikbare componenten maken waar het kan en goede onderverdeling van atomic design.
+
+          Actie: Ik heb een IconButton kunnen maken die op 7 verschillende plekken staan in andere variaties. Ook heb ik
+          een Filterbar gemaakt die vanuit de database de filters dynamisch bepaalt, dit is handig dus voor het
+          uitbreiden.
+          Ik heb ook de detail pagina gemaakt die dynamisch is, de data op de detail pagina is ook vanuit de database en
+          wordt conditioneel wel of niet getoond als het veld leeg is.
+
+          Resultaat: De applicatie heeft een mooie structurering en het is een stuk duidelijker voor me hoe ik te werk
+          kan gaan met Atomic design. We hebben het ontwerp gedeconstrueerd en hiervan bepaald welke componenten er nou
+          herbruikt kunnen worden. Ook heb ik een dynamische detail pagina gemaakt die data ophaalt vanuit de API, dit
+          heb ik ook nog eens geoptimaliseerd door velden weg te laten als er geen content is.
+
+          Reflectie: Dit is het leerdoel waar ik eigenlijk het meest het geleerd qua theorie. Niet alleen omdat ik
+          SvelteKit en TypeScript heb zitten leren, maar ook omdat deze logica universeel is en weinig verandert tussen
+          de frameworks. De IconButton componenten hebben verschillende states en wordt bijvoorbeeld automatisch een
+          anchor link als we de href atribute mee geven. Zo hoeven we niet opnieuw een anchor te maken of een ander
+          component. Ik heb ook weer kunnen werken met wat data en merk dat ik comfortabel begin te worden met
+          complexere data display, zoals link knoppen, regex etc.
+
         </li>
         <li>
+          Leerdoel: Database onder de knie krijgen
+
+          Situatie: Er is nog weinig/gering data en dit moet aangevuld worden, onze opdrachtgever is niet technisch,
+          maar kan wel bij de data en aanpassingen doorgeven voor ons. Als we geen datastructuur bepalen wordt het vrij
+          lastig om dit project futureproof te maken, doordat de structuur van de huidige database niet bepaald fijn is
+          om mee te werken. Dit kan ons limiteren in bijvoorbeeld kaart relaties, maar ook onderverdeling.
+
           Ik zou graag wat meer willen leren het structureren en implementeren
           van een CMS/database, Ik heb nog amper ervaring met een CMS en vind
           dit belangrijk voor mijn persoonlijke developer leerdoelen, vooral
@@ -206,6 +249,30 @@
           zou moeten structureren. Ik wil over het algemeen een beter begrip
           hebben van professioneel informatie architectuur, dit bevat de
           logica, tot de aanpak en het schalen van het project met meer data.
+
+          Taak: We moeten de structuur bepalen van de database zodat we goede data terug krijgen. We moeten aan de hand
+          van de UX en design bepalen welke velden we nodig hebben en welke velden we weg moeten laten.
+
+          Actie: We hebben contact opgenomen met Ronald die ons doorverwees naar Krijn. We hebben aan krijn gevraagd of
+          we toegang kunnen krijgen tot de API en vragen ook of hij toegang heeft tot de CMS van Directus. Een CMS is
+          handig omdat Ronald zijn .csv bestand er in zou kunnen stoppen en wij de nieuwe data direct zouden kunnen
+          gebruiken. Vervolgens hebben we met Ronald bepaald welke velden er wel of niet in ons ontwerp hoort te zitten.
+
+          Resultaat: We hebben zeker zeggenschap gehad over de CMS en structurering van de data, de huidige database is
+          alleen niet perfect. Dit komt doordat er velden zijn die in de toekomst verwijderd zullen worden, en wij de
+          kaart relaties hierdoor niet konden verdelen. We hebben ons best gedaan om nog zo ver mogelijk met de huidige
+          data te komen. Zo heb ik een failsafe gemaakt voor de bron links. Momenteel worden er 2 of meer links gestopt
+          in hetzelfde veld, wat ongebruikelijk is en snel kan zorgen voor fouten. Maar hier hebben wij er dus voor
+          gezorgd dat we met wat regex toch de links kunnen splitten en displayen. Hetzelfde geld ook voor de docenten
+          gerelateerd aan het vak.
+
+          Reflectie: Data structurering kan het best zo vroeg mogelijk aangepakt worden zodat je later niet tegen
+          limitaties zit. Wel heb ik een beter begrip gekregen van hoe dit moet en weet ik voor de volgende keer beter
+          hoe dit in zijn werking zou moeten gaan. Dingen zoals meerdere value's in 1 veld stoppen zal ik dus voortaan
+          niet meer goedkeuren. Ik heb eindelijk een CMS aangeraakt en begrijp nu de mogelijkheden die zowel voor de
+          klant als developer handig zijn.
+
+
         </li>
       </ul>
     </section>
