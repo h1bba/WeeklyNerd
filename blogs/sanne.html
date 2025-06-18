@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanne 't Hooft - Experimental CSS features</title>
+</head>
+
+<body>
+    <p>Deze week geeft mijn eigen docent Sanne 't Hooft een online presentatie waar ik mij voor heb ingeschreven. Sanne
+        is een tinkerer met CSS en kan veel coole interacties maken voor het web.</p>
+
+    <p>Voor de Hackathon hebben we gebruik gemaakt van Google Canary, dit is een browser bedoelt voor developers, met de
+        nieuwste experimental features. We hebben deze features zelf een weekje voorheen moeten leren om de Hackathon af
+        te ronden. Maar toch fijn dat we een refresher krijgen van wat we nou eigenlijk geleerd hebben.</p>
+
+    <p>CSS anchoring wordt straks een ding en is heel fijn om te gebruiken voor hovers of extra meldingen. Een CSS
+        anchor bepaalt aan welke kant de content moet staan ten opzichte van het element. Hierdoor kan je bijvoorbeeld
+        makkelijk van die chat bubbles maken die ook nog eens responsive kunnen zijn.</p>
+
+    <p>Position-try-fallbacks is een nieuwe experimental CSS feature die kijkt of de positie zou overlappen van
+        bijvoorbeeld de CSS anchor, als hij zou overlappen kan je een fallback state geven in CSS nu, hierdoor kan de
+        anchor nog meer responsive worden, maar je kan nu ook layout's omdraaien, bijvoorbeeld met de flip-blocks value.
+    </p>
+
+    <p>We kunnen ook de anchor gebruiken in geavanceerdere voorbeelden, ik volgde zelf niet zo heel goed meer wat Sanne
+        deed want het leek vrij complex, maar een voorbeeld hiervan is op de achor, Bottom: anchor(top); zo kunnen we
+        zeggen dat de anchor van de bovenkant moet verschijnen als het element onderin zit.</p>
+
+    <p>Om dit ook nog mooi te groeperen, stel je voor je wilt niet op elke item een anchor, kunnen we gebruik maken van
+        anchor-scope. Hiermee kunnen we bijvoorbeeld een variabele maken en die koppelen aan de items die wel een anchor
+        moeten hebben.</p>
+
+    <p>Sibling-index heb ik zelf gebruikt bij hackathon om pin's te droppen die een kleine delay tussen elkaar hebben.
+        Voorheen moest je met JavaScript uitzoeken hoeveel pins er nou zijn en dan via de moeilijke manier (JavaScript)
+        een script schrijven wat deze pin's 1 voor 1 zou droppen met een kleine delay. Nu hoeft dat niet meer, het enige
+        wat nu nodig is is sibling-index en sibling-count. Deze kijkt naar de parent element en kijkt hoeveel children
+        er zijn. Dit bespaart een stuk JavaScript omdat het nu dus binnen CSS/de browser kan.</p>
+
+    <p>Deze Weekly Nerd was interessant omdat ik ook in een chat zat met 50 andere mensen, verspreid over de hele
+        wereld. Zo zag je dat mensen buiten de opleiding ook echt interesse hebben in ontwikkeling. De Weekly Nerd zelf
+        was iets complexer dan gewend, maar gelukkig had ik hiervoor de hackathon afgerond waardoor ik een beetje
+        ervaring had gekregen met deze nieuwe experimental features.</p>
+</body>
+
+</html>
