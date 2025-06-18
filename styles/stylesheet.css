@@ -16,12 +16,12 @@
   @keyframes hero-title-ani {
     0% {
       font-family: cheee-variable, sans-serif;
-      font-variation-settings: "GRVT"250, "YEST"800;
+      font-variation-settings: "GRVT" 250, "YEST" 800;
     }
 
     100% {
       font-family: cheee-variable, sans-serif;
-      font-variation-settings: "GRVT"750, "YEST"800;
+      font-variation-settings: "GRVT" 750, "YEST" 800;
     }
   }
 
@@ -32,7 +32,7 @@
   h5 {
     transition: 1s ease;
     font-family: cheee-variable, sans-serif;
-    font-variation-settings: "GRVT"250, "YEST"1000;
+    font-variation-settings: "GRVT" 250, "YEST" 1000;
 
     color: var(--bodytext);
   }
@@ -47,7 +47,6 @@
   }
 
   a {
-
     margin: auto;
     width: fit-content;
     padding: 1em;
@@ -60,23 +59,20 @@
   }
 
   h1 {
-    font-size: clamp(1rem, 8.5vw, 9rem);
+    font-size: clamp(1rem, 6.5vw, 9rem);
     line-height: 0.75;
     letter-spacing: 4px;
     text-align: center;
     /* animation: hero-title-ani 1s ease infinite alternate; */
-
   }
 
-  h1>span {
+  h1 > span {
     animation: hero-title-ani 3s ease infinite alternate;
-
   }
 
   h2 {
     /* font-size: 7.594rem; */
     font-size: clamp(1rem, 4.5vw, 7.594rem);
-
   }
 
   h3 {
@@ -115,11 +111,11 @@
 
   .hero-title {
     word-wrap: break-word;
-    word-break: break-all;
+    /* word-break: break-all; */
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 80vh;
+    height: auto;
     box-sizing: border-box;
     margin: 0.5em;
     padding: 4em;
@@ -128,10 +124,10 @@
   }
 
   .hero-title h1:hover {
-    font-variation-settings: "GRVT"250, "YEST"800;
+    font-variation-settings: "GRVT" 250, "YEST" 800;
   }
 
-  .hero-title>h1 {
+  .hero-title > h1 {
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -139,6 +135,10 @@
 }
 
 @layer layout {
+  body {
+    color: black;
+  }
+
   img {
     max-width: 80vw;
     border-radius: 0.5em;
