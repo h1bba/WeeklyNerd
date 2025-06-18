@@ -4,7 +4,7 @@
   :root {
     --bodytext: #f5eedc;
     --bgcolor: #0d0d0d;
-    --offgrey: #ddd4bc;
+    --offgrey: #bbbbbb;
   }
 
   body {
@@ -13,70 +13,43 @@
 }
 
 @layer type {
-  @keyframes hero-title-ani {
-    0% {
-      font-family: cheee-variable, sans-serif;
-      font-variation-settings: "GRVT" 250, "YEST" 800;
-    }
-
-    100% {
-      font-family: cheee-variable, sans-serif;
-      font-variation-settings: "GRVT" 750, "YEST" 800;
-    }
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    transition: 1s ease;
-    font-family: cheee-variable, sans-serif;
-    font-variation-settings: "GRVT" 250, "YEST" 1000;
-
-    color: var(--bodytext);
-  }
-
   p,
   ul li {
-    color: var(--bodytext);
+    color: var(--offgrey);
     font-family: sans-serif;
 
-    font-size: 1.25em;
-    line-height: 1.33;
+    font-size: 1rem;
+    line-height: 1.75;
   }
 
   a {
-    margin: auto;
-    width: fit-content;
-    padding: 1em;
-    /* border: 1px solid var(--bodytext); */
+    /* margin: auto; */
+    align-items: center;
+    gap: 0.5rem;
+    /* padding: 1em; */
     display: flex;
-    /* gap: 0.5em; */
-    /* font-size: clamp(1rem, 2.5vw, 6rem); */
     color: var(--bodytext);
+    text-decoration: none;
     font-family: sans-serif;
   }
 
   h1 {
-    font-size: clamp(1rem, 6.5vw, 9rem);
-    line-height: 0.75;
-    letter-spacing: 4px;
-    text-align: center;
-    /* animation: hero-title-ani 1s ease infinite alternate; */
-  }
-
-  h1 > span {
-    animation: hero-title-ani 3s ease infinite alternate;
+    font-size: 2.25rem;
+    color: var(--bodytext);
+    font-family: "Inter", sans-serif;
   }
 
   h2 {
     /* font-size: 7.594rem; */
-    font-size: clamp(1rem, 4.5vw, 7.594rem);
+    font-size: 2rem;
+    color: var(--bodytext);
+    font-family: "Inter", sans-serif;
   }
 
   h3 {
-    font-size: 5.063rem;
+    font-size: 1.75rem;
+    color: var(--bodytext);
+    font-family: "Inter", sans-serif;
   }
 
   .blogs-container {
@@ -85,17 +58,39 @@
 
   .blogs-container ul {
     text-decoration: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 1em;
     list-style: none;
     padding: 0;
   }
 
   .blogs-container ul li {
-    padding: 2em 1em 2em 1em;
-    border-radius: 0.5em;
+    text-align: center;
+    padding: 1em;
+    /* max-width: 234px; */
+    /* border-radius: 0.5em; */
+    flex-direction: column;
+
     border: 1px solid var(--bodytext);
+  }
+
+  .blogs-container img {
+    width: 200px;
+    max-width: 200px;
+    /* max-width: 100px; */
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .blogs-container p {
+    margin: 0.2rem;
+  }
+
+  .blogs-container a {
+    position: relative;
+    margin: 0;
+    width: fit-content;
   }
 
   /* ul li::marker {
@@ -107,20 +102,6 @@
     font-family: sans-serif;
 
     font-size: 1em;
-  }
-
-  .hero-title {
-    word-wrap: break-word;
-    /* word-break: break-all; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: auto;
-    box-sizing: border-box;
-    margin: 0.5em;
-    padding: 4em;
-    border: 1px solid var(--bodytext);
-    border-radius: 0.5em;
   }
 
   .hero-title h1:hover {
@@ -135,19 +116,54 @@
 }
 
 @layer layout {
+  main {
+    margin: auto;
+    max-width: 1024px;
+    padding: 0em 2em 0 2em;
+  }
+
   body {
-    color: black;
+    color: var(--bgcolor);
   }
 
   img {
-    max-width: 80vw;
+    max-width: 768px;
     border-radius: 0.5em;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
 
   section {
     margin: auto;
-    max-width: 1600px;
+    max-width: 1024px;
     width: 80vw;
+  }
+
+  section.projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    gap: 1em;
+  }
+
+  section.projects ul > a {
+    width: calc(50% - 1em);
+  }
+
+  section.projects ul > a > li {
+    height: 300px;
+    text-align: center;
+    padding: 1em;
+    border: 1px solid var(--bodytext);
+
+    text-decoration: none;
+    list-style: none;
+  }
+
+  section.projects img {
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    width: 100%;
+    max-height: 300px;
+    max-width: 500px;
   }
 }

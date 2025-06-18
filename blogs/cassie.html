@@ -8,96 +8,98 @@
   </head>
 
   <body>
-    <h2>GSAP more than tweens</h2>
-    <h3>Cassie Evans</h3>
-    <p>
-      Cassie Evans is een digitale "Tinkerer", ze houdt er van om kunst te maken
-      die vaak ook nog eens interactief is. Cassie haar expertise ligt bij SVG
-      en GSAP, ze gebruikt beiden vaak in combinatie om deze digitale
-      kunstwerken te maken. Ze komt ons vandaag vertellen over de Javascript
-      library genaamd GSAP, GSAP maakt DOM manipulatie voor animaties op
-      elementen makkelijk en introduceert ons een plug and play optie om de
-      hoofdpijn met intersectionObserver te besparen.
-    </p>
+    <main>
+      <h2>GSAP more than tweens</h2>
+      <h3>Cassie Evans</h3>
+      <p>
+        Cassie Evans is een digitale "Tinkerer", ze houdt er van om kunst te
+        maken die vaak ook nog eens interactief is. Cassie haar expertise ligt
+        bij SVG en GSAP, ze gebruikt beiden vaak in combinatie om deze digitale
+        kunstwerken te maken. Ze komt ons vandaag vertellen over de Javascript
+        library genaamd GSAP, GSAP maakt DOM manipulatie voor animaties op
+        elementen makkelijk en introduceert ons een plug and play optie om de
+        hoofdpijn met intersectionObserver te besparen.
+      </p>
 
-    <p>
-      Voor staggered animations (animatie's die aan de hand van de scroll
-      positionering de animatie afspeelt, ook wel bekend als scroll-driven
-      animations). Voorheen deden we dit dus met intersectionObserver van
-      JavaScript, vervolgens heeft CSS dit opgepakt en een zogenoemde
-      'view-timeline' geintroduceerd, met view-timeline: scroll kunnen we met de
-      technologie van de browser zelf kijken waar de scroll zich bevindt van de
-      gebruiker en aan de hand daarvan scroll-driven animaties toepassen. Het
-      probleem momenteel met deze optie is dat het nog niet goed wordt
-      ondersteund voor door alle browsers en het onzeker is of de browser zelf
-      het wel zou willen implementeren.
-    </p>
+      <p>
+        Voor staggered animations (animatie's die aan de hand van de scroll
+        positionering de animatie afspeelt, ook wel bekend als scroll-driven
+        animations). Voorheen deden we dit dus met intersectionObserver van
+        JavaScript, vervolgens heeft CSS dit opgepakt en een zogenoemde
+        'view-timeline' geintroduceerd, met view-timeline: scroll kunnen we met
+        de technologie van de browser zelf kijken waar de scroll zich bevindt
+        van de gebruiker en aan de hand daarvan scroll-driven animaties
+        toepassen. Het probleem momenteel met deze optie is dat het nog niet
+        goed wordt ondersteund voor door alle browsers en het onzeker is of de
+        browser zelf het wel zou willen implementeren.
+      </p>
 
-    <p>
-      Dit is de reden dat GSAP nog zeker relevant is vandaag. Dit is namelijk
-      een JavaScript library die wel op alle browsers zou werken die slechts
-      JavaScript ondersteunen. GSAP brengt een aantal features met zich mee
-      zoals een eigen timeline, tweening/stagger, quickSetter(), Utilities,
-      Modifiers, Easing presets, matchMedia(), onMouse en drag events en een
-      MotionPath helper.
-    </p>
+      <p>
+        Dit is de reden dat GSAP nog zeker relevant is vandaag. Dit is namelijk
+        een JavaScript library die wel op alle browsers zou werken die slechts
+        JavaScript ondersteunen. GSAP brengt een aantal features met zich mee
+        zoals een eigen timeline, tweening/stagger, quickSetter(), Utilities,
+        Modifiers, Easing presets, matchMedia(), onMouse en drag events en een
+        MotionPath helper.
+      </p>
 
-    <p>
-      quickSetter (of .set()), wordt gebruikt om de optimalisatie van animaties
-      te regelen. Je kan bijvoorbeeld veel animaties tegelijk hebben, waardoor
-      een custom cursor ineens kan beginnen te haperen of verspringen. Hiervoor
-      heeft GSAP dus deze functie bedacht, om sneller de calculatie te maken van
-      posities die op het scherm worden doorgegeven.
-    </p>
+      <p>
+        quickSetter (of .set()), wordt gebruikt om de optimalisatie van
+        animaties te regelen. Je kan bijvoorbeeld veel animaties tegelijk
+        hebben, waardoor een custom cursor ineens kan beginnen te haperen of
+        verspringen. Hiervoor heeft GSAP dus deze functie bedacht, om sneller de
+        calculatie te maken van posities die op het scherm worden doorgegeven.
+      </p>
 
-    <p>
-      GSAP brengt ook veel handige utilities met zich mee, zo heeft GSAP een
-      eigen random(), mapRange() of wrap() die je allemaal ook nog eens kan
-      gebruiken voor animaties die er smooth en goed uitzien. Voor Easing heeft
-      GSAP wat handige presets, maar ook een online Easing preview tool. Daarmee
-      kan je gemakkelijk een custom easing maken en bekijken hoe het er uit zou
-      zien.
-    </p>
+      <p>
+        GSAP brengt ook veel handige utilities met zich mee, zo heeft GSAP een
+        eigen random(), mapRange() of wrap() die je allemaal ook nog eens kan
+        gebruiken voor animaties die er smooth en goed uitzien. Voor Easing
+        heeft GSAP wat handige presets, maar ook een online Easing preview tool.
+        Daarmee kan je gemakkelijk een custom easing maken en bekijken hoe het
+        er uit zou zien.
+      </p>
 
-    <p>
-      matchMedia kan je zien als een soort media query, je kan dit gebruiken om
-      te kijken of een animatie wel of niet moet afspelen, of misschien op een
-      andere manier. Dit is handig in combinatie met screensize, zo kan je
-      bepaalde animaties voor mobiel uitschakelen of juist toepassen. Dit kan
-      verder gaan dan CSS omdat het in combinatie ook JS kan gebruiken wat
-      mogelijk animaties die met alleen CSS kan overtreft.
-    </p>
+      <p>
+        matchMedia kan je zien als een soort media query, je kan dit gebruiken
+        om te kijken of een animatie wel of niet moet afspelen, of misschien op
+        een andere manier. Dit is handig in combinatie met screensize, zo kan je
+        bepaalde animaties voor mobiel uitschakelen of juist toepassen. Dit kan
+        verder gaan dan CSS omdat het in combinatie ook JS kan gebruiken wat
+        mogelijk animaties die met alleen CSS kan overtreft.
+      </p>
 
-    <p>
-      onMouse en drag events zijn animaties die je op of met je cursor kan
-      toepassen aan de hand van wat de cursor/muis doet. Drag is bijvoorbeeld
-      veel hoofdpijn als je het zelf zou moeten schrijven, daarom introduceert
-      GSAP een gemakkelijke oplossing waar zwaartekracht en physics al zijn
-      geintroduceerd.
-    </p>
+      <p>
+        onMouse en drag events zijn animaties die je op of met je cursor kan
+        toepassen aan de hand van wat de cursor/muis doet. Drag is bijvoorbeeld
+        veel hoofdpijn als je het zelf zou moeten schrijven, daarom introduceert
+        GSAP een gemakkelijke oplossing waar zwaartekracht en physics al zijn
+        geintroduceerd.
+      </p>
 
-    <p>
-      MotionPath helper is een handige tool, vooral als je niet wiskundig bent.
-      Stel je voor je wilt een animatie een speciale path laten volgen die
-      gebogen is. Voorheen moest je met wiskunde de boog berekenen en was het
-      ook nog eens ellende om het pad niet stijfjes te volgen. Met MotionPath
-      helper is het mogelijk om visueel de path te zien die je aan het maken
-      bent en zijn er ook een aantal presets voor je die een goede startpunt
-      kunnen bieden.
-    </p>
+      <p>
+        MotionPath helper is een handige tool, vooral als je niet wiskundig
+        bent. Stel je voor je wilt een animatie een speciale path laten volgen
+        die gebogen is. Voorheen moest je met wiskunde de boog berekenen en was
+        het ook nog eens ellende om het pad niet stijfjes te volgen. Met
+        MotionPath helper is het mogelijk om visueel de path te zien die je aan
+        het maken bent en zijn er ook een aantal presets voor je die een goede
+        startpunt kunnen bieden.
+      </p>
 
-    <p>
-      Marieke geeft ons een duidelijke maar ook informatieve presentatie, ze
-      geeft ons een "heads up" voor wat er aan komt en vertelt er bij ook de
-      oplossingen die we potentieel kunnen gebruiken om een product toegankelijk
-      te maken. Zelf heb ik ooit voor vitamines op een webshop de
-      productbeschrijvingen moeten schrijven en had ik hiervoor ChatGPT gebruikt
-      omdat ik weinig verstand heb van medicijnen. Hier kwamen antwoorden uit
-      als "Kan helpen tegen herstel van kanker", ik ging er van uit dat het goed
-      was en binnen 2 weken kregen wij een brief dat dit niet mag volgens de
-      europese wetgeving en er voor vitamines en medicijnen duidelijke
-      beschrijvingen zijn waar in staat wat je wel en niet mag claimen van je
-      product. Deze EAA is daarom wel interessant voor mij.
-    </p>
+      <p>
+        Marieke geeft ons een duidelijke maar ook informatieve presentatie, ze
+        geeft ons een "heads up" voor wat er aan komt en vertelt er bij ook de
+        oplossingen die we potentieel kunnen gebruiken om een product
+        toegankelijk te maken. Zelf heb ik ooit voor vitamines op een webshop de
+        productbeschrijvingen moeten schrijven en had ik hiervoor ChatGPT
+        gebruikt omdat ik weinig verstand heb van medicijnen. Hier kwamen
+        antwoorden uit als "Kan helpen tegen herstel van kanker", ik ging er van
+        uit dat het goed was en binnen 2 weken kregen wij een brief dat dit niet
+        mag volgens de europese wetgeving en er voor vitamines en medicijnen
+        duidelijke beschrijvingen zijn waar in staat wat je wel en niet mag
+        claimen van je product. Deze EAA is daarom wel interessant voor mij.
+      </p>
+    </main>
   </body>
 </html>
