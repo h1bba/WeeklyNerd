@@ -3,8 +3,22 @@
 @layer base {
   :root {
     --bodytext: #f5eedc;
-    --bgcolor: #0d0d0d;
-    --offgrey: #bbbbbb;
+    --bgcolor: #1a1a1a;
+    --offgrey: #c9c9c9;
+    --titlecolor: rgb(228 228 231);
+
+    --containergradient: linear-gradient(
+      0deg,
+      rgba(54, 54, 54, 0.5) 0%,
+      rgba(28, 28, 28, 0.5) 100%
+    );
+
+    --containergradienthover: linear-gradient(
+      0deg,
+      rgba(78, 78, 78, 0.5) 0%,
+      rgba(41, 41, 41, 0.5) 100%
+    );
+    --bordercolor: rgba(255, 255, 255, 0.5);
   }
 
   body {
@@ -13,6 +27,17 @@
 }
 
 @layer type {
+  body,
+  p,
+  b,
+  small {
+    font-family: "Inter", sans-serif;
+  }
+
+  b {
+    color: var(--titlecolor);
+  }
+
   p,
   ul li {
     color: var(--offgrey);
@@ -23,10 +48,8 @@
   }
 
   a {
-    /* margin: auto; */
     align-items: center;
     gap: 0.5rem;
-    /* padding: 1em; */
     display: flex;
     color: var(--bodytext);
     text-decoration: none;
@@ -35,21 +58,26 @@
 
   h1 {
     font-size: 2.25rem;
-    color: var(--bodytext);
+    color: var(--titlecolor);
     font-family: "Inter", sans-serif;
   }
 
-  h2 {
-    /* font-size: 7.594rem; */
+  h2,
+  summary {
     font-size: 2rem;
-    color: var(--bodytext);
+    font-weight: 400;
+    color: var(--titlecolor);
     font-family: "Inter", sans-serif;
   }
 
   h3 {
     font-size: 1.75rem;
-    color: var(--bodytext);
+    color: var(--titlecolor);
     font-family: "Inter", sans-serif;
+  }
+
+  ::marker {
+    color: var(--titlecolor);
   }
 
   .blogs-container {
@@ -72,7 +100,9 @@
     /* border-radius: 0.5em; */
     flex-direction: column;
 
-    border: 1px solid var(--bodytext);
+    border: 1px solid var(--bordercolor);
+    border-radius: 1em;
+    background-image: var(--containergradient);
   }
 
   .blogs-container img {
@@ -88,9 +118,16 @@
   }
 
   .blogs-container a {
+    transition: 1s ease;
+
     position: relative;
     margin: 0;
     width: fit-content;
+  }
+
+  .blogs-container a:hover {
+    transition: 1s ease;
+    background-image: var(--containergradienthover);
   }
 
   /* ul li::marker {
@@ -149,11 +186,18 @@
     width: calc(50% - 1em);
   }
 
+  section.projects ul > a:hover {
+    transition: 1s ease;
+    background-image: var(--containergradienthover);
+  }
+
   section.projects ul > a > li {
     height: 300px;
     text-align: center;
     padding: 1em;
-    border: 1px solid var(--bodytext);
+    border: 1px solid var(--bordercolor);
+    border-radius: 1em;
+    background-image: var(--containergradient);
 
     text-decoration: none;
     list-style: none;
@@ -165,5 +209,12 @@
     width: 100%;
     max-height: 300px;
     max-width: 500px;
+  }
+
+  details {
+    border: 1px solid var(--bordercolor);
+    border-radius: 1em;
+    background-image: var(--containergradient);
+    padding: 1em;
   }
 }
