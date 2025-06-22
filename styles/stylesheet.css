@@ -7,13 +7,17 @@
     --offgrey: #c9c9c9;
     --titlecolor: rgb(228 228 231);
 
-    --containergradient: linear-gradient(0deg,
-        rgba(54, 54, 54, 0.5) 0%,
-        rgba(28, 28, 28, 0.5) 100%);
+    --containergradient: linear-gradient(
+      0deg,
+      rgba(54, 54, 54, 0.5) 0%,
+      rgba(28, 28, 28, 0.5) 100%
+    );
 
-    --containergradienthover: linear-gradient(0deg,
-        rgba(78, 78, 78, 0.5) 0%,
-        rgba(41, 41, 41, 0.5) 100%);
+    --containergradienthover: linear-gradient(
+      0deg,
+      rgba(78, 78, 78, 0.5) 0%,
+      rgba(41, 41, 41, 0.5) 100%
+    );
     --bordercolor: rgba(255, 255, 255, 0.5);
   }
 
@@ -32,7 +36,6 @@
 }
 
 @layer type {
-
   body,
   p,
   b,
@@ -72,9 +75,10 @@
     line-height: 1;
     /* margin: 1em; */
     max-width: 768px;
-    letter-spacing: -2%;
+    /* letter-spacing: -2%; */
     color: var(--titlecolor);
     font-family: "Inter", sans-serif;
+    margin-bottom: 0.4em;
   }
 
   h2 {
@@ -88,10 +92,15 @@
     font-family: "Inter", sans-serif;
   }
 
-  h3, summary {
+  h3,
+  summary {
     font-size: 1.75rem;
     color: var(--titlecolor);
     font-family: "Inter", sans-serif;
+  }
+
+  .hero h3 {
+    margin-bottom: 0;
   }
 
   ::marker {
@@ -112,6 +121,9 @@
     /* gap: 1em; */
     list-style: none;
     padding: 0;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 8em;
   }
 
   .blogs-container ul li {
@@ -122,8 +134,7 @@
     /* padding: 1em; */
     width: inherit;
     border-radius: 1em;
-
-
+    margin: auto;
   }
 
   .blogs-container img {
@@ -136,7 +147,6 @@
 
   .blogs-container p {
     margin: 0.2rem;
-
   }
 
   .blogs-container a {
@@ -156,11 +166,9 @@
   }
 
   .blogs-container a:hover {
-    transition: .5s ease;
+    transition: 0.5s ease;
     background-image: var(--containergradienthover);
     transform: scale(1.1);
-
-
   }
 
   /* ul li::marker {
@@ -172,16 +180,6 @@
     font-family: sans-serif;
 
     font-size: 1em;
-  }
-
-  .hero-title h1:hover {
-    font-variation-settings: "GRVT"250, "YEST"800;
-  }
-
-  .hero-title>h1 {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
   }
 }
 
@@ -207,6 +205,29 @@
     max-width: 768px;
     border-radius: 0.5em;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  }
+
+  ul.tools {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+      border-radius: 1em;
+      transition: 0.3s ease;
+
+      max-width: 3rem;
+      max-height: 3rem;
+      padding: 1em;
+    }
+  }
+
+  ul.tools img:hover {
+    transition: 0.3s ease;
+    rotate: 15deg;
+    scale: 1.1;
   }
 
   section {
@@ -237,21 +258,17 @@
   }
 
   .scroll-track li {
-
+    margin: auto;
     width: 640px;
     flex-shrink: 0;
     /* spacing */
     list-style: none;
   }
 
-  .scroll-track li:nth-of-type(6) {
-    padding-right: 10em;
-  }
-
-  .scroll-track li a {
+  .scroll-track li > article {
     display: block;
     width: 100%;
-    height: 420px;
+    height: max-content;
     text-align: center;
     border: 1px solid var(--bordercolor);
     border-radius: 1em;
@@ -260,12 +277,17 @@
     color: inherit;
   }
 
+  section.hero {
+    width: 1024px;
+    margin: auto;
+  }
+
   section.projects ul a:hover {
     transition: 1s ease;
     background-image: var(--containergradienthover);
   }
 
-  section.projects ul>li>a {
+  section.projects ul > li > a {
     margin: 1em;
     /* height: 80vh; */
     text-align: center;
@@ -303,11 +325,39 @@
     left: 50%;
     transform: translateX(-50%);
     width: fit-content;
-    border-radius: .5em;
+    border-radius: 0.5em;
     padding: 1em 1.5em 1em 1.5em;
     border: 1px solid var(--bordercolor);
     background-color: hsla(0, 0%, 0%, 0.8);
     backdrop-filter: blur(1em);
     z-index: 3;
+  }
+
+  .button-wrapper {
+    display: flex;
+    gap: 1em;
+  }
+
+  .button {
+    width: 10em;
+    word-break: normal;
+    text-align: center;
+
+    /* padding: 0.5em 1em 0.5em 1em; */
+    border-radius: 2em;
+
+    /* width: max-content; */
+    border: 1px solid var(--bordercolor);
+  }
+
+  .icon {
+    gap: 1em;
+    aspect-ratio: unset !important;
+    max-width: 32px;
+    max-height: 32px;
+  }
+
+  .github-logo {
+    filter: invert(1);
   }
 }
