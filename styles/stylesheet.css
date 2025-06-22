@@ -353,8 +353,8 @@
   .icon {
     gap: 1em;
     aspect-ratio: unset !important;
-    max-width: 32px;
-    max-height: 32px;
+    max-width: 2em;
+    max-height: 2em;
   }
 
   .github-logo {
