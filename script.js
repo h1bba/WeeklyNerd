@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".fade-element").forEach(el => {
         const randomRotation = gsap.utils.random(-20, 20);
         gsap.fromTo(el,
-            { opacity: 0, y: 50, scale: 1.2, rotation: randomRotation },
+            { opacity: 0, y: 50, scale: 1.1, rotation: randomRotation },
             {
                 rotation: 0,
                 opacity: 1,
@@ -20,11 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 y: 0,
                 scale: 1,
                 delay: 0.3,
+
                 scrollTrigger: {
                     // markers: true,
                     trigger: el,
                     start: "bottom bottom",
-                    end: "top 80%",
+                    end: "top 85%",
                     toggleActions: "play none none reverse",
                     // scrub: true,
                 }
@@ -71,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
         animation: tween,
         scrub: 1,
         invalidateOnRefresh: true,
-        markers: true
+        // markers: true
     })
 
 
