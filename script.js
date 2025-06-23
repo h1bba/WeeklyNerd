@@ -1,79 +1,89 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Basis: check of systeem motion wil verminderen
+  let reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-    const lenis = new Lenis({
-        autoRaf: true,
+  // Simpele sessie-timer flag (alleen tijdens huidige reload)
+  if (sessionStorage.getItem("reduceMotion") === "true") {
+    reduceMotion = true;
+  }
+
+  // Voeg event listener toe aan knop (indien aanwezig)
+  const toggleBtn = document.getElementById("toggle-motion");
+  if (toggleBtn) {
+    toggleBtn.textContent = `Motion ${
+      reduceMotion ? "aanzetten" : "uitzetten"
+    }`;
+    toggleBtn.addEventListener("click", () => {
+      const newValue = !reduceMotion;
+      sessionStorage.setItem("reduceMotion", newValue.toString());
+      location.reload();
     });
+  }
 
-    lenis.on('scroll', (e) => {
-    });
+  // Stop hier als motion uit staat
+  if (reduceMotion) {
+    document.documentElement.style.scrollBehavior = "auto";
+    scrollTrack.style.document.return;
+  }
 
-    gsap.registerPlugin(ScrollTrigger);
+  // ✅ Lenis smooth scroll
+  const lenis = new Lenis({
+    autoRaf: true,
+  });
 
-    document.querySelectorAll(".fade-element").forEach(el => {
-        const randomRotation = gsap.utils.random(-20, 20);
-        gsap.fromTo(el,
-            { opacity: 0, y: 50, scale: 1.1, rotation: randomRotation },
-            {
-                rotation: 0,
-                opacity: 1,
-                duration: 0.5,
-                y: 0,
-                scale: 1,
-                delay: 0.3,
+  lenis.on("scroll", (e) => {});
 
-                scrollTrigger: {
-                    // markers: true,
-                    trigger: el,
-                    start: "bottom bottom",
-                    end: "top 85%",
-                    toggleActions: "play none none reverse",
-                    // scrub: true,
-                }
-            }
-        );
-    });
+  gsap.registerPlugin(ScrollTrigger);
 
-    // const container = document.querySelector(".scroll-track");
-    // const scrollLength = container.scrollWidth - window.innerWidth;
+  // Fade-in animaties
+  document.querySelectorAll(".fade-element").forEach((el) => {
+    const randomRotation = gsap.utils.random(-20, 20);
+    gsap.fromTo(
+      el,
+      { opacity: 0, y: 50, scale: 1.2, rotation: randomRotation },
+      {
+        rotation: 0,
+        opacity: 1,
+        duration: 0.5,
+        y: 0,
+        scale: 1,
+        delay: 0.3,
+        scrollTrigger: {
+          trigger: el,
+          start: "bottom bottom",
+          end: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  });
 
-    // gsap.to(container, {
-    //     x: () => `-${scrollLength}px`,
-    //     ease: "none",
-    //     scrollTrigger: {
-    //         trigger: ".projects",
-    //         start: "bottom bottom",
-    //         end: () => `+=${scrollLength}`,
-    //         scrub: true,
-    //         // pin: true,
-    //     }
-    // });
+  // Horizontale scroll animatie (alleen als .scroll-track bestaat)
+  const scrollTrack = document.querySelector(".scroll-track");
 
-    // https://codepen.io/snorkltv/pen/PoxojaO
-    const scrollTrack = document.querySelector(".scroll-track");
-    console.log(scrollTrack.offsetWidth)
-
+  if (scrollTrack) {
     function getScrollAmount() {
-        let scrollTrackWidth = scrollTrack.scrollWidth;
-        return -(scrollTrackWidth - window.innerWidth);
+      let scrollTrackWidth = scrollTrack.scrollWidth;
+      return -(scrollTrackWidth - window.innerWidth);
     }
 
     const tween = gsap.to(scrollTrack, {
-        x: getScrollAmount,
-        duration: 1,
-        ease: "none",
+      x: getScrollAmount,
+      duration: 1,
+      ease: "none",
     });
 
-
     ScrollTrigger.create({
-        trigger: ".projects",
-        start: "top 20%",
-        end: () => `+=${getScrollAmount() * -1}`,
-        pin: true,
-        animation: tween,
-        scrub: 1,
-        invalidateOnRefresh: true,
-        // markers: true
-    })
-
-
-})
+      trigger: ".projects",
+      start: "top 20%",
+      end: () => `+=${getScrollAmount() * -1}`,
+      pin: true,
+      animation: tween,
+      scrub: 1,
+      invalidateOnRefresh: true,
+      // markers: true // optioneel
+    });
+  }
+});

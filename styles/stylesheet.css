@@ -7,13 +7,17 @@
     --offgrey: #c9c9c9;
     --titlecolor: rgb(228 228 231);
 
-    --containergradient: linear-gradient(0deg,
-        rgba(54, 54, 54, 0.5) 0%,
-        rgba(28, 28, 28, 0.5) 100%);
+    --containergradient: linear-gradient(
+      0deg,
+      rgba(54, 54, 54, 0.5) 0%,
+      rgba(28, 28, 28, 0.5) 100%
+    );
 
-    --containergradienthover: linear-gradient(0deg,
-        rgba(78, 78, 78, 0.5) 0%,
-        rgba(41, 41, 41, 0.5) 100%);
+    --containergradienthover: linear-gradient(
+      0deg,
+      rgba(78, 78, 78, 0.5) 0%,
+      rgba(41, 41, 41, 0.5) 100%
+    );
     --bordercolor: rgba(255, 255, 255, 0.5);
   }
 
@@ -32,7 +36,6 @@
 }
 
 @layer type {
-
   body,
   p,
   b,
@@ -49,7 +52,8 @@
     max-width: 768px;
   }
 
-  p, small,
+  p,
+  small,
   ul li {
     color: var(--offgrey);
     font-family: "Inter", sans-serif;
@@ -113,17 +117,16 @@
     /* padding: 4em; */
   }
 
-  details p, details>b {
+  details p,
+  details > b {
     /* max-width: 768px; */
     margin: 1rem auto;
-
   }
 
-  details>b {
+  details > b {
     max-width: 768px;
     padding-left: 3.5rem;
   }
-
 
   .hero h3 {
     margin-bottom: 0;
@@ -209,7 +212,7 @@
     font-size: 1em;
   }
 
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 768px) {
     h1 {
       font-size: 2.5rem;
     }
@@ -218,10 +221,9 @@
       padding-top: 1em;
       text-align: left;
       font-size: 2rem;
-
     }
 
-    details>b {
+    details > b {
       padding-left: 0em;
     }
   }
@@ -251,8 +253,6 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   }
 
-
-
   ul.tools {
     list-style: none;
     padding-left: 0;
@@ -273,7 +273,6 @@
     ul.tools li {
       display: flex;
     }
-
   }
 
   ul.tools img:hover {
@@ -288,11 +287,9 @@
     /* width: 80vw; */
   }
 
-
-  section.hero>img {
+  section.hero > img {
     max-width: 300px;
   }
-
 
   section.projects {
     /* height: 100vw; */
@@ -311,7 +308,9 @@
     box-sizing: border-box;
     display: flex;
     width: fit-content;
-    padding-right: 100%;
+    flex-direction: row;
+    padding-right: 30%;
+    /* margin: auto; */
     gap: 2em;
   }
 
@@ -323,7 +322,7 @@
     list-style: none;
   }
 
-  .scroll-track li>article {
+  .scroll-track li > article {
     display: block;
     padding: 0 0 2em 0;
     width: 100%;
@@ -350,7 +349,7 @@
     background-image: var(--containergradienthover);
   }
 
-  section.projects ul>li>a {
+  section.projects ul > li > a {
     margin: 1em;
     /* height: 80vh; */
     text-align: center;
@@ -363,7 +362,7 @@
     list-style: none;
   }
 
-  section.projects article>img {
+  section.projects article > img {
     aspect-ratio: 2/1;
     object-fit: cover;
     width: 100%;
@@ -429,7 +428,6 @@
   }
 
   section.nav-weekly {
-
     ul {
       display: flex;
       flex-wrap: wrap;
@@ -448,7 +446,7 @@
     }
   }
 
-  @media screen and (max-width:768px) {
+  @media screen and (max-width: 768px) {
     section.hero {
       display: flex;
       flex-direction: column;
@@ -461,6 +459,11 @@
       justify-content: center;
 
       /* grid-template-columns: 1fr 1fr; */
+    }
+
+    .scroll-track {
+      /* flex-direction: column; */
+      padding-left: 0;
     }
 
     .scroll-track li {
@@ -477,6 +480,25 @@
       position: relative;
       left: 0;
       transform: none;
+    }
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    ul.scroll-track {
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      width: max-content;
+    }
+
+    ul.scroll-track li {
+      display: flex;
+    }
+
+    section.projects {
+      display: block;
+      margin: auto;
+      /* justify-content: center; */
     }
   }
 }
