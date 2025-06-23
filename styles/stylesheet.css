@@ -472,5 +472,11 @@
       flex-direction: column;
       justify-self: center;
     }
+
+    .label {
+      position: relative;
+      left: 0;
+      transform: none;
+    }
   }
 }
