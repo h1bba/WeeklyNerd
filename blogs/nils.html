@@ -1,74 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nils Binder - Design for Flexibility</title>
-    <link rel="stylesheet" href="../styles/stylesheet.css" />
-  </head>
-  <body>
-    <main>
-      <h2>Design for Flexibility</h2>
-      <h3>Nils Binder</h3>
-      <p>
-        Nils Binder is lead (Front-end) designer bij 9elements. Nils die stelt
-        ons de vraag, which of the 2 websites are you currently making? Waarbij
-        hij een foto laat zien van 2 verschillende layouts. Deze layouts worden
-        het vaakst aangehouden en domineren de styling van het internet.
-      </p>
 
-      <p>
-        Nils die vind dat wij te snel uitgaan van dat een design goed is omdat
-        het past op een paar schermen, maar vertelt dat wij er veel te makkelijk
-        naar kijken. Tegenwoordig hebben we 21:9 widescreens en worden dit soort
-        schermen vaak over het hoofd gezien.
-      </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nils Binder - Design for Flexibility</title>
+  <link rel="stylesheet" href="../styles/stylesheet.css" />
+</head>
 
-      <p>
-        Whitespace is belangrijk bij design en ook dus bij websites. Een goede
-        whitespace gebruik zorgt er voor dat de layout van het ontwerp wat
-        rustiger oogt en voor hierarchy zorgt. Momenteel zijn bijna alle
-        websites niet geoptimaliseerd voor schermen buiten de standaard (16:9,
-        4:3 etc.)
-      </p>
+<body>
+  <main>
+    <a class="button" href="/">
+      <img class="icon" src="../images/arrow-left.svg" />Terug naar Home</a>
+    <h2>Design for Flexibility</h2>
+    <h3>Nils Binder</h3>
+    <p>
+      Nils Binder is lead (Front-end) designer bij 9elements. Nils die stelt
+      ons de vraag, which of the 2 websites are you currently making? Waarbij
+      hij een foto laat zien van 2 verschillende layouts. Deze layouts worden
+      het vaakst aangehouden en domineren de styling van het internet.
+    </p>
 
-      <p>
-        Op de opleiding krijgen we mee dat we voor font units geen PX maar REM
-        moeten gebruiken, maar waarom zeggen ze dit? Dit komt doordat REM aan de
-        body font-size relatief staat, en wanneer de gebruiker dus zou inzoomen,
-        dat ook daadwerkelijk de font-size groter wordt, anders heeft het
-        inzoomen namelijk niet zo veel nut.
-      </p>
+    <p>
+      Nils die vind dat wij te snel uitgaan van dat een design goed is omdat
+      het past op een paar schermen, maar vertelt dat wij er veel te makkelijk
+      naar kijken. Tegenwoordig hebben we 21:9 widescreens en worden dit soort
+      schermen vaak over het hoofd gezien.
+    </p>
 
-      <p>
-        Nils vertelt ons over de manier waarop veel wrappers worden gestyled. We
-        gebruiken max-width, padding, margin, maar Nils die maakt een punt dat
-        dit de verouderde manier zou zijn omdat CSS nieuwe mogelijkheden heeft.
-        De nieuwe styling die Nils voorstelt zou gebruik maken van clamp(),
-        min(), max() en margin-inline. Door gebruik te maken van deze nieuwe
-        features is webdesign al een stuk meer responsive voor meer schermen.
-      </p>
+    <p>
+      Whitespace is belangrijk bij design en ook dus bij websites. Een goede
+      whitespace gebruik zorgt er voor dat de layout van het ontwerp wat
+      rustiger oogt en voor hierarchy zorgt. Momenteel zijn bijna alle
+      websites niet geoptimaliseerd voor schermen buiten de standaard (16:9,
+      4:3 etc.)
+    </p>
 
-      <p>
-        Nils die vertelt dat wij designers & developers ons limiteren door het
-        gebruik van tools zoals Figma. Hij vertelt dat hij komt vanuit een tijd
-        waar het ontwerp nog werd ontworpen in Photoshop en dat de evolutie van
-        deze tools voor de standaard taken prima zijn, maar vaak achter lopen op
-        features van het web. Figma die geeft ons momenteel alleen de optie om
-        PX, REM of % te gebruiken. CSS die bevaat veel meer units die gebruikt
-        kunnen worden, denk maar eens aan (D)VH, (D)VW, CH, EM, Vmax en Vmin.
-        CSS introduceert ons ook container query units: QH, QW, QB, Qmin, Qmax
-        etc.
-      </p>
+    <p>
+      Op de opleiding krijgen we mee dat we voor font units geen PX maar REM
+      moeten gebruiken, maar waarom zeggen ze dit? Dit komt doordat REM aan de
+      body font-size relatief staat, en wanneer de gebruiker dus zou inzoomen,
+      dat ook daadwerkelijk de font-size groter wordt, anders heeft het
+      inzoomen namelijk niet zo veel nut.
+    </p>
 
-      <p>
-        Ik vind dat Nils een goede punt maakt en dat de tools en werkelijke
-        mogelijkheden, niet meer in synchronisatie met elkaar zijn en ons
-        daadwerkelijk limiteert. Ik merkte deze limitatie al snel bij variabele
-        font's met font-feature-settings en kwam er dus achter dat tools zoals
-        figma deze niet ondersteunen waardoor wij bij het ontwerp proces niet zo
-        snel denken aan dit soort dingen.
-      </p>
-    </main>
-  </body>
+    <p>
+      Nils vertelt ons over de manier waarop veel wrappers worden gestyled. We
+      gebruiken max-width, padding, margin, maar Nils die maakt een punt dat
+      dit de verouderde manier zou zijn omdat CSS nieuwe mogelijkheden heeft.
+      De nieuwe styling die Nils voorstelt zou gebruik maken van clamp(),
+      min(), max() en margin-inline. Door gebruik te maken van deze nieuwe
+      features is webdesign al een stuk meer responsive voor meer schermen.
+    </p>
+
+    <p>
+      Nils die vertelt dat wij designers & developers ons limiteren door het
+      gebruik van tools zoals Figma. Hij vertelt dat hij komt vanuit een tijd
+      waar het ontwerp nog werd ontworpen in Photoshop en dat de evolutie van
+      deze tools voor de standaard taken prima zijn, maar vaak achter lopen op
+      features van het web. Figma die geeft ons momenteel alleen de optie om
+      PX, REM of % te gebruiken. CSS die bevaat veel meer units die gebruikt
+      kunnen worden, denk maar eens aan (D)VH, (D)VW, CH, EM, Vmax en Vmin.
+      CSS introduceert ons ook container query units: QH, QW, QB, Qmin, Qmax
+      etc.
+    </p>
+
+    <p>
+      Ik vind dat Nils een goede punt maakt en dat de tools en werkelijke
+      mogelijkheden, niet meer in synchronisatie met elkaar zijn en ons
+      daadwerkelijk limiteert. Ik merkte deze limitatie al snel bij variabele
+      font's met font-feature-settings en kwam er dus achter dat tools zoals
+      figma deze niet ondersteunen waardoor wij bij het ontwerp proces niet zo
+      snel denken aan dit soort dingen.
+    </p>
+    <section class="nav-weekly">
+      <p><b>Weekly Nerds</b></p>
+      <ul>
+        <li>
+          <a href="kilian.html">
+            Kilian Valkhof
+          </a>
+        </li>
+        <li>
+          <a href="peter.html">
+            Peter Paul Koch
+          </a>
+        </li>
+        <li>
+          <a href="roel.html">
+            Roel Nieskens
+          </a>
+        </li>
+        <li>
+          <a href="cassie.html">
+            Cassie Evans
+          </a>
+        </li>
+        <li>
+          <a href="nils.html">
+            Nils Binder
+          </a>
+        </li>
+        <li>
+          <a href="jeremy.html">
+            Jeremy Keith
+          </a>
+        </li>
+        <li>
+          <a href="julia.html">
+            Julia Miocene
+          </a>
+        </li>
+        <li>
+          <a href="rosa.html">
+            Rosa Schuurmans
+          </a>
+        </li>
+        <li>
+          <a href="sanne.html">
+            Sanne 't Hooft
+          </a>
+        </li>
+        <li>
+          <a href="niels.html">
+            Niels Leenheer
+          </a>
+        </li>
+        <li>
+          <a href="idea11y.html">
+            IDEA11LY
+          </a>
+        </li>
+
+        <li>
+          <a href="iodigital.html">
+            IO Digital
+          </a>
+        </li>
+        <li>
+          <a href="q42.html">
+            Q42
+          </a>
+        </li>
+        <li>
+          <a href="marieke.html">
+            Marieke de Hoop
+          </a>
+        </li>
+        <li>
+          <a href="miriam.html">
+            Miriam Suzanne
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+
 </html>
